@@ -76,7 +76,18 @@ class ArticlesController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_article
-      @article = Article.find(params[:id])
+      begin
+        @article = Article.find(params[:id])
+      rescue ActiveRecord::RecordNotFound
+        flash[:alert] = "Sorry, the article that you are looking for cannot be found!"
+        respond_to do |format|
+          format.html{
+            redirect_to articles_path
+          }
+
+          format.json {render :json , status: 404}
+        end
+      end
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.

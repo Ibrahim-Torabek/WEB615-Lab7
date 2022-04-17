@@ -1,4 +1,13 @@
-# README
+# WEB615 - Lab 6
+
+### Author: Ibrahim (Wusiman Yibulayin)
+
+## Completed Tasks
+
+### Part 1 - Error Handling
+### Part 2 - Authentication
+### Part 3 - Migrations
+### Part 4 - Deploy
 
 This README would normally document whatever steps are necessary to get the
 application up and running.
