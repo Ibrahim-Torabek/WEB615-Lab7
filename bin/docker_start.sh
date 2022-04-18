@@ -15,8 +15,7 @@ if [ $RET -gt 0 ]; then
   echo "=~=~=~=~=~=~= Seeding the database =~=~=~=~=~=~="
   bin/rails db:seed
 fi
-#echo "=~=~=~=~=~=~= Seeding the database =~=~=~=~=~=~="
-#bin/rails db:seed
+
 echo "=~=~=~=~=~=~= Removing the old server PID =~=~=~=~=~=~="
 rm -f tmp/pids/server.pid
 echo "=~=~=~=~=~=~= Starting the webserver =~=~=~=~=~=~="

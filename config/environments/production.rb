@@ -86,6 +86,11 @@ Rails.application.configure do
     config.logger    = ActiveSupport::TaggedLogging.new(logger)
   end
 
+  # code from google analytics
+  config.middleware.use(Rack::Tracker) do
+    handler :google_analytics, { tracker: 'U-XXXXX-Y' }
+  end
+
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
 end

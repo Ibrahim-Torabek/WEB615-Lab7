@@ -5,7 +5,7 @@ git_source(:github) do |repo_name|
   "https://github.com/#{repo_name}.git"
 end
 
-ruby '2.6.6'
+ruby '~>2.6.0'
 
 
 gem 'rails', '~> 5.1.4'
@@ -42,6 +42,7 @@ gem 'jbuilder', '~> 2.5'
 #gem 'sqlite3'
 gem 'pg', '~> 0.21'
 gem 'devise'
+gem 'rack-tracker'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
@@ -64,7 +65,7 @@ end
 
 group :production do
   gem 'rails_12factor'
-  gem 'pg', '~> 0.21'
+  #gem 'pg', '~> 0.21'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
