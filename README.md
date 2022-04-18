@@ -6,7 +6,7 @@
 ## Completed Tasks
 
 ### Part 1 - Google Analytics
-![Google Analytics](Docs/1.Google Analytics.png)
+![Google Analytics](Docs/1.Google_Analytics.png)
 
 ### Part 2 - Uptime Robot
 ![Google Analytics](Docs/3.Uptime Robot.png)
