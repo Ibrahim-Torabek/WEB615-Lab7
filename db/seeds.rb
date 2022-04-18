@@ -5,12 +5,14 @@ for i in 1..100
   paragraph_2 = Faker::Books::Lovecraft.paragraphs.join(' ')
   paragraph_3 = Faker::Hipster.paragraphs.join(' ')
   @article.content = "#{paragraph_1} <br /> #{paragraph_2} <br /> #{paragraph_3}"
+  @article.user = User.first
   if @article.save
     p "#{@article.title} has been saved"
     for ii in 1..10
       @comment = Comment.new
       @comment.article = @article
       @comment.message = Faker::Hacker.say_something_smart
+      @comment.user = User.first
       if @comment.save
         p "Comment #{ii} has been saved for article #{@article.title}"
       else
