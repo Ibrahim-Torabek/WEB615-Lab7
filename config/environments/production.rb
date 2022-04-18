@@ -88,7 +88,7 @@ Rails.application.configure do
 
   # code from google analytics
   config.middleware.use(Rack::Tracker) do
-    handler :google_analytics, { tracker: 'G-QTJKX7NF6X' }
+    handler :google_analytics, { tracker: 'UA-226309065-1' }
   end
 
   # Do not dump schema after migrations.
